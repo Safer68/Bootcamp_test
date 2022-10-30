@@ -1,7 +1,6 @@
 package by.nenartovich.repository.utils;
 
 
-
 import by.nenartovich.repository.Role;
 
 import javax.persistence.AttributeConverter;

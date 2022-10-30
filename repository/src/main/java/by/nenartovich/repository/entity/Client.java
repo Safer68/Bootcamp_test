@@ -1,6 +1,7 @@
 package by.nenartovich.repository.entity;
 
 import by.nenartovich.repository.Role;
+import by.nenartovich.repository.utils.RoleConverter;
 import lombok.*;
 
 import javax.persistence.*;
@@ -27,10 +28,10 @@ public class Client {
     @Column(name = "patronymic", length = 40)
     private String patronymic;
 
-    @Column(name = "Email")
-    private String Email;
+    @Column(name = "email")
+    private String email;
 
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = RoleConverter.class)
     @Column(name = "role")
     private Role role;
 }
